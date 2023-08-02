@@ -1,0 +1,8 @@
+enigma-sphere-server/
+  ├── config/
+  ├── controllers/
+  ├── middleware/
+  ├── models/
+  ├── routes/
+  ├── app.js
+  └── package.json
