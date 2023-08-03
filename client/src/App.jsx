@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 import "./css/signup-style.css";
 import Signup from "./components/Signup";
 import Login from './components/Login';
