@@ -1,4 +1,4 @@
-<h1 align="center">🚀 Project Name</h1>
+<h1 align="center">🚀 ENGIMA-SPHERE PLATFORM</h1>
 
 <p align="center">
   <strong>Short project description goes here!</strong>
