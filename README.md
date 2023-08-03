@@ -77,8 +77,8 @@ Step-by-step guide to installing Engima-Sphere on GitHub:
 
     
 
-git clone https://github.com/your-username/engima-sphere.git
-cd engima-sphere
+    git clone https://github.com/AbdiDesalegn/engima-sphere.git
+    cd engima-sphere
 
 Install Dependencies:
 
