@@ -21,29 +21,28 @@ Engima-Sphere is an all-encompassing social platform designed to create a thrivi
 
 
 ## 🚀 Features
-    ✨ User Authentication: Secure registration and login system to ensure users' privacy and data protection.
+    ✨ User Authentication
 
-    🌟 Customizable User Profiles: Users can personalize their profiles with profile pictures, bios, and other details to express their individuality.
+    🌟 Customizable User Profiles
 
-    🎉 Post Creation and Sharing: Engima-Sphere allows users to create and publish text, image, and video posts, enabling them to share their thoughts, experiences, and creativity.
+    🎉 Post Creation and Sharing
 
-    🌈 Post Interaction: Users can engage with posts by liking, commenting, and sharing, fostering a supportive and interactive community.
+    🌈 Post Interaction
 
-    🌌 Privacy Settings: Control over post visibility ensures users can share content based on their preferences, whether public, friends-only, or private.
+    🌌 Privacy Settings
 
-    💫 Discovery and Search: Engima-Sphere provides efficient searching and discovery features, making it easy for users to find other users, posts, and topics of interest.
+    💫 Discovery and Search
+    🚀 Following/Followers System
 
-    🚀 Following/Followers System: Users can follow and view followers, fostering connections and expanding social circles.
+    📬 Real-time Notifications
 
-    📬 Real-time Notifications: Receive real-time notifications for likes, comments, and new followers, ensuring users never miss any important interactions.
+    📈 Trending and Popular Content
 
-    📈 Trending and Popular Content: Engima-Sphere highlights trending posts and topics, allowing users to explore popular content and stay up-to-date.
+    🔖 Hashtags and Categorization
 
-    🔖 Hashtags and Categorization: Users can use hashtags to categorize posts, making content easily discoverable within relevant topics.
+    💌 Direct Messaging
 
-    💌 Direct Messaging: Private messaging enables seamless communication between users, encouraging meaningful conversations.
-
-    🛡️ Reporting and Moderation: A robust system for reporting and moderation ensures a safe and respectful environment for all users.
+    🛡️ Reporting and Moderation
 
 Join Engima-Sphere today and discover these exciting features within our vibrant social universe! 🚀
 
@@ -53,19 +52,19 @@ Join Engima-Sphere today and discover these exciting features within our vibrant
 
 Before getting started with Engima-Sphere, ensure you have the following software and tools installed on your system:
 
-    Node.js: Engima-Sphere is built on Node.js, a JavaScript runtime. You can download the latest version of Node.js from the official website: Node.js Official Website
+    Node.js
 
-    MongoDB: Engima-Sphere uses MongoDB, a NoSQL database, to store data. Install MongoDB Community Edition following the instructions for your operating system: MongoDB Installation Guides
+    MongoDB
 
-    npm (Node Package Manager): npm comes bundled with Node.js installation. However, ensure you have the latest version of npm. You can check the version by running npm -v in the terminal.
+    npm (Node Package Manager)
 
-    Git: Engima-Sphere is version-controlled with Git. Install Git from the official website: Git Official Website
+    Git
 
-    Text Editor or IDE: You'll need a code editor or integrated development environment (IDE) to work on Engima-Sphere's source code. Popular choices include Visual Studio Code, Sublime Text, or Atom.
+    Text Editor or IDE
 
-    Optional: Docker (for deployment): If you plan to deploy Engima-Sphere using Docker, you'll need to install Docker on your system. Refer to the Docker documentation for installation steps: Docker Official Website
+    Optional: Docker (for deployment)
 
-Once you have all the prerequisites installed, you're ready to dive into the Engima-Sphere codebase and start exploring its exciting features!
+
 
 
 
