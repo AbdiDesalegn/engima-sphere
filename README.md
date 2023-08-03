@@ -68,4 +68,68 @@ Before getting started with Engima-Sphere, ensure you have the following softwar
 
 
 
-=
+**###INSTALLATION**
+Step-by-step guide to installing Engima-Sphere on GitHub:
+
+    Clone the Repository:
+
+    Open your terminal or command prompt and navigate to the directory where you want to clone the Engima-Sphere repository.
+
+    
+
+git clone https://github.com/your-username/engima-sphere.git
+cd engima-sphere
+
+Install Dependencies:
+
+First, navigate to the client directory and install frontend dependencies.
+
+
+
+cd client
+npm install
+
+Next, navigate to the server directory and install backend dependencies.
+
+
+
+cd ../server
+npm install
+
+Set Up Environment Variables:
+
+In the server directory, create a .env file and set the required environment variables.
+
+
+
+MONGO_URI=your-mongodb-uri
+SECRET_KEY=your-secret-key
+
+Replace your-mongodb-uri with your MongoDB connection URI, and your-secret-key with a secure secret key for JWT (JSON Web Tokens).
+
+Start the Application:
+
+Return to the root directory of the project and start both the frontend and backend servers.
+
+
+
+cd ..
+npm start
+
+Access the Application:
+
+Once both servers are running, you can access the Engima-Sphere application in your web browser. Open your browser and enter the following URL:
+
+
+
+    http://localhost:3000
+
+    You should see the Engima-Sphere landing page and be able to explore its various features.
+
+Usage:
+
+The example code provided earlier demonstrated how to use a package called amazing-package. However, since Engima-Sphere is a full-fledged social platform and not just a package, the usage is different.
+
+To use Engima-Sphere, you can interact with the frontend user interface to create posts, customize your profile, interact with other users' posts, send messages, and explore trending content. The usage of Engima-Sphere is primarily through its intuitive and user-friendly web interface.
+
+Enjoy your journey in Engima-Sphere, where you can connect with others, share your stories, and experience an exciting social universe! 🌌
