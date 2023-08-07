@@ -1,7 +1,7 @@
 // config/db.js
 const mongoose = require('mongoose');
 
-const MONGO_URI = 'mongodb://127.0.0.1:27017/employee'
+const MONGO_URI = 'mongodb://127.0.0.1:27017/engima-sphere'
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,

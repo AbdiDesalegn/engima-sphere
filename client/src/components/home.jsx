@@ -1,116 +1,153 @@
 import React from 'react';
 import '../css/Home.css'; // Import the custom CSS file for styling
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Avatar from '@mui/material/Avatar';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import ImageIcon from "@mui/icons-material/Image";
+import Link from '@mui/material/Link';
+import Divider from '@mui/material/Divider';
+import PrimarySearchAppBar from './PrimarySearchAppBar';
 
 function Home() {
   return (
     <div>
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container">
-          <a className="navbar-brand" href="#">EnigmaSphere</a>
-          {/* Add navigation links here */}
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Profile</a>
-            </li>
-            {/* Add more navigation links here */}
-            {/* Add login/logout button based on user authentication status */}
-          </ul>
-        </div>
-      </nav>
+      <AppBar position="static">
+      <PrimarySearchAppBar />
+      </AppBar>
 
       {/* Main Content */}
-      <div className="container mt-4">
-        <div className="row">
+      <Container mt={4}>
+        <Grid container spacing={4}>
           {/* Left Sidebar */}
-          <div className="col-md-3">
-            <div className="card mb-4">
-              <div className="card-body text-center">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture" className="img-fluid rounded-circle mb-3" />
-                <h5>User Name</h5>
-                <p>User Bio</p>
-              </div>
-            </div>
+          <Grid item md={3}>
+            <Card>
+              <CardContent>
+                <Avatar src="https://via.placeholder.com/150" alt="Profile Picture" sx={{ width: 150, height: 150, mb: 3 }} />
+                <Typography variant="h6">User Name</Typography>
+                <Typography variant="body1">User Bio</Typography>
+              </CardContent>
+            </Card>
 
-            <div className="card mb-4">
-              <div className="card-body">
-                <h6>Trending Posts</h6>
+            <Card mt={4}>
+              <CardContent>
+                <Typography variant="h6">Trending Posts</Typography>
                 {/* Add trending posts here */}
-                <ul className="list-unstyled">
-                  <li><a href="#">Trending Post 1</a></li>
-                  <li><a href="#">Trending Post 2</a></li>
+                <ul>
+                  <li>
+                    <Link href="#">Trending Post 1</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Trending Post 2</Link>
+                  </li>
                   {/* Add more trending posts */}
                 </ul>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
 
             {/* Add other sections to the left sidebar as needed */}
-          </div>
+          </Grid>
 
           {/* Main Feed */}
-          <div className="col-md-6">
+          <Grid item md={6}>
             {/* Post Creation Form */}
-            <div className="card mb-4">
-              <div className="card-body">
-                <form>
-                  <textarea className="form-control mb-3" placeholder="What's on your mind?" />
-                  <input type="file" className="form-control-file mb-3" />
-                  <button type="submit" className="btn btn-primary">Post</button>
-                </form>
-              </div>
-            </div>
+            <Card>
+              <CardContent>
+                <TextField
+                  fullWidth
+                  multiline
+                  rows={4}
+                  placeholder="What's on your mind?"
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton edge="end">
+                          <ImageIcon />
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+              </CardContent>
+              <CardActions>
+                <Button variant="contained" color="primary">
+                  Post
+                </Button>
+              </CardActions>
+            </Card>
 
             {/* Post Cards */}
-            <div className="card mb-4">
-              <div className="card-body">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture" className="img-fluid rounded-circle mr-2" width="30" height="30" />
-                <strong>User Name</strong>
-                <p>This is a post content.</p>
-              </div>
-              <div className="card-footer">
-                <button className="btn btn-link">Like</button>
-                <button className="btn btn-link">Comment</button>
-                <button className="btn btn-link">Share</button>
-              </div>
-            </div>
+            <Card mt={4}>
+              <CardContent>
+                <Grid container alignItems="center">
+                  <Grid item>
+                    <Avatar src="https://via.placeholder.com/150" alt="Profile Picture" sx={{ width: 30, height: 30, mr: 2 }} />
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="subtitle1">User Name</Typography>
+                    <Typography variant="body2">This is a post content.</Typography>
+                  </Grid>
+                </Grid>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Like</Button>
+                <Button size="small">Comment</Button>
+                <Button size="small">Share</Button>
+              </CardActions>
+            </Card>
             {/* Add more post cards here */}
-          </div>
+          </Grid>
 
           {/* Right Sidebar */}
-          <div className="col-md-3">
+          <Grid item md={3}>
             {/* Notifications */}
-            <div className="card mb-4">
-              <div className="card-body">
-                <h6>Notifications</h6>
+            <Card>
+              <CardContent>
+                <Typography variant="h6">Notifications</Typography>
                 {/* Add notifications here */}
-                <ul className="list-unstyled">
-                  <li><a href="#">New Notification 1</a></li>
-                  <li><a href="#">New Notification 2</a></li>
+                <ul>
+                  <li>
+                    <Link href="#">New Notification 1</Link>
+                  </li>
+                  <li>
+                    <Link href="#">New Notification 2</Link>
+                  </li>
                   {/* Add more notifications */}
                 </ul>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
+
+            <Divider mt={2} mb={2} />
 
             {/* Followers */}
-            <div className="card mb-4">
-              <div className="card-body">
-                <h6>Followers</h6>
+            <Card>
+              <CardContent>
+                <Typography variant="h6">Followers</Typography>
                 {/* Add followers here */}
-                <ul className="list-unstyled">
-                  <li><a href="#">Follower 1</a></li>
-                  <li><a href="#">Follower 2</a></li>
+                <ul>
+                  <li>
+                    <Link href="#">Follower 1</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Follower 2</Link>
+                  </li>
                   {/* Add more followers */}
                 </ul>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
 
             {/* Add other sections to the right sidebar as needed */}
-          </div>
-        </div>
-      </div>
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 }

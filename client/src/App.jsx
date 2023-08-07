@@ -6,6 +6,7 @@ import "./css/signup-style.css";
 import Signup from "./components/Signup";
 import Login from './components/Login';
 import Home from "./components/home";
+import UserProfile from "./components/UserProfile";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -16,6 +17,7 @@ function App() {
     <Route path="/register" element = {<Signup />}></Route>
     <Route path="/login" element = {<Login/>}></Route>
     <Route path="/home" element ={<Home />}></Route>
+    <Route path="/userprofile" element={<UserProfile/>} ></Route>
   </Routes>
   </BrowserRouter>;
 }
