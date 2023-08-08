@@ -1,5 +1,3 @@
-// PrimarySearchAppBar.js
-
 import React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -17,7 +15,6 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import UserProfile from './UserProfile';
 import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
@@ -60,8 +57,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar({ username }) {
-    navigator = useNavigate();
+export default function PrimarySearchAppBar() {
+  const navigate = useNavigate(); // Use 'navigate' instead of 'navigator'
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -69,11 +67,11 @@ export default function PrimarySearchAppBar({ username }) {
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event) => {
-    navigator('/userprofile');
+    // Use 'navigate' to navigate to the desired route
+    navigate('/userprofile');
   };
 
   const handleMobileMenuClose = () => {
-    navigator
     setMobileMoreAnchorEl(null);
   };
 
@@ -155,7 +153,7 @@ export default function PrimarySearchAppBar({ username }) {
         >
           <AccountCircle />
         </IconButton>
-        <p>{username}</p>
+        <p>User Name</p>
       </MenuItem>
     </Menu>
   );
@@ -179,7 +177,7 @@ export default function PrimarySearchAppBar({ username }) {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            Engima-Sphere
           </Typography>
           <Search>
             <SearchIconWrapper>

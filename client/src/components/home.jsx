@@ -16,6 +16,9 @@ import ImageIcon from "@mui/icons-material/Image";
 import Link from '@mui/material/Link';
 import Divider from '@mui/material/Divider';
 import PrimarySearchAppBar from './PrimarySearchAppBar';
+import PostCreation from './PostCreation';
+import PostContentCard from './PostCard';
+import UserProfileSidebar from './Profilecard';
 
 function Home() {
   return (
@@ -27,7 +30,10 @@ function Home() {
       {/* Main Content */}
       <Container mt={4}>
         <Grid container spacing={4}>
-          {/* Left Sidebar */}
+          {/* Left Sidebar */
+          
+          <UserProfileSidebar />
+          }
           <Grid item md={3}>
             <Card>
               <CardContent>
@@ -58,52 +64,14 @@ function Home() {
 
           {/* Main Feed */}
           <Grid item md={6}>
-            {/* Post Creation Form */}
-            <Card>
-              <CardContent>
-                <TextField
-                  fullWidth
-                  multiline
-                  rows={4}
-                  placeholder="What's on your mind?"
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton edge="end">
-                          <ImageIcon />
-                        </IconButton>
-                      </InputAdornment>
-                    ),
-                  }}
-                />
-              </CardContent>
-              <CardActions>
-                <Button variant="contained" color="primary">
-                  Post
-                </Button>
-              </CardActions>
-            </Card>
+            {/* Post Creation Form */
+            < PostCreation />
+            }
+            
 
-            {/* Post Cards */}
-            <Card mt={4}>
-              <CardContent>
-                <Grid container alignItems="center">
-                  <Grid item>
-                    <Avatar src="https://via.placeholder.com/150" alt="Profile Picture" sx={{ width: 30, height: 30, mr: 2 }} />
-                  </Grid>
-                  <Grid item>
-                    <Typography variant="subtitle1">User Name</Typography>
-                    <Typography variant="body2">This is a post content.</Typography>
-                  </Grid>
-                </Grid>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Like</Button>
-                <Button size="small">Comment</Button>
-                <Button size="small">Share</Button>
-              </CardActions>
-            </Card>
-            {/* Add more post cards here */}
+            {/* Post Cards */
+            <PostContentCard />
+            }
           </Grid>
 
           {/* Right Sidebar */}
