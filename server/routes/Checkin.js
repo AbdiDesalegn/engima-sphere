@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Checkin = require("./models/Checkin");
+const Checkin = require("../models/Checkin");
 
 // Create a new check-in
 router.post("/checkins", async (req, res) => {

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const PostMedia = require("./models/PostMedia");
+const PostMedia = require("../models/PostMedia");
 
 // Upload post media
 router.post("/post-media", async (req, res) => {

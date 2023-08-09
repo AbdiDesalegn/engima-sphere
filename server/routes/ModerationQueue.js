@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const ModerationQueue = require("./models/ModerationQueue");
+const ModerationQueue = require("../models/ModerationQueue");
 
 // Add a post to the moderation queue
 router.post("/moderation-queue", async (req, res) => {

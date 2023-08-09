@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Follower = require("./models/Follower");
+const Follower = require("../models/Follower");
 
 // Create a new follower relationship
 router.post("/follow", async (req, res) => {

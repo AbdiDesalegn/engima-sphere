@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const PostAnalytics = require("./models/PostAnalytics");
+const PostAnalytics = require("../models/PostAnalytics");
 
 // Create post analytics
 router.post("/post-analytics", async (req, res) => {

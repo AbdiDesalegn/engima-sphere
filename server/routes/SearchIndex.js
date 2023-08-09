@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const SearchIndex = require("./models/SearchIndex");
+const SearchIndex = require("../models/SearchIndex");
 
 // Create a new search index entry
 router.post("/search-index", async (req, res) => {

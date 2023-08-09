@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const UserSettings = require("./models/UserSettings");
+const UserSettings = require("../models/UserSettings");
 
 // Update user settings
 router.put("/user-settings/:userId", async (req, res) => {

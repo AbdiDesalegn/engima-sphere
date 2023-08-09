@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Topic = require("./models/Topic");
+const Topic = require("../models/Topic");
 
 // Create a new topic
 router.post("/topics", async (req, res) => {

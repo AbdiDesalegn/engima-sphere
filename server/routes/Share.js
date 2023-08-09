@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Share = require("./models/Share");
+const Share = require("../models/Share");
 
 // Create a new share entry
 router.post("/shares", async (req, res) => {

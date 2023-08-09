@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const UserAnalytics = require("./models/UserAnalytics");
+const UserAnalytics = require("../models/UserAnalytics");
 
 // Create user analytics
 router.post("/user-analytics", async (req, res) => {

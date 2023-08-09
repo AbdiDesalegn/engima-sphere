@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const PostVisibility = require("./models/PostVisibility");
+const PostVisibility = require("../models/PostVisibility");
 
 // Create a new post visibility entry
 router.post("/post-visibility", async (req, res) => {

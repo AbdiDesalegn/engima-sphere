@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Like = require("./models/Like");
+const Like = require("../models/Like");
 
 // Create a new like
 router.post("/likes", async (req, res) => {

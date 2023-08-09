@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const ExploreContent = require("./models/ExploreContent");
+const ExploreContent = require("../models/ExploreContent");
 
 // Create a new explore content entry
 router.post("/explore-content", async (req, res) => {

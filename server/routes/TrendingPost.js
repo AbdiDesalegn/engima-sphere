@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const TrendingPost = require("./models/TrendingPost");
+const TrendingPost = require("../models/TrendingPost");
 
 // Create a new trending post
 router.post("/trending-posts", async (req, res) => {

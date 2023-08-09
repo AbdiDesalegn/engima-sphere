@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Hashtag = require("./models/Hashtag");
+const Hashtag = require("../models/Hashtag");
 
 // Create a new hashtag
 router.post("/hashtags", async (req, res) => {
