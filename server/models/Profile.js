@@ -1,10 +1,17 @@
 const mongoose = require('mongoose');
 
 const profileSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  profilePicture: String,
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'Users' },
+  profilePicture: String, // Store path to image file
   bio: String,
-  preferences: Object // Customizable preferences
+  username: String,
+  email: String,
+  updates: [{
+    text: String,
+    createdAt: { type: Date, default: Date.now }
+  }]
 });
 
-module.exports = mongoose.model('Profile', profileSchema);
+const ProfileModel = mongoose.model('Profile', profileSchema);
+
+module.exports = ProfileModel;

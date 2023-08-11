@@ -6,15 +6,41 @@ const UserProfile = () => {
   const [bio, setBio] = useState('');
   const [email, setEmail] = useState('');
   const [showEmail, setShowEmail] = useState(false); // Privacy setting for email visibility
-  const [profilePictureUrl, setProfilePictureUrl] = useState(
-    'https://via.placeholder.com/150' // Default placeholder image URL
-  );
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
+  const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState('');
 
-  const handleProfileUpdate = (e) => {
+  const handleProfileUpdate = async (e) => {
     e.preventDefault();
-    // Add code to update user profile on the server
-    // You can send the updated data (username, bio, email, showEmail, profilePictureUrl, etc.) to the server
+
+    const updatedProfile = {
+      username,
+      bio,
+      email,
+      showEmail,
+      profilePictureUrl,
+    };
+
+    try {
+      const response = await fetch('http://localhost:3000/profiles', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedProfile),
+      });
+
+      if (!response.ok) {
+        throw new Error('Error updating profile');
+      }
+
+      setSuccessMessage('Profile updated successfully');
+      setError(null);
+    } catch (err) {
+      setError(err.message); // Set the error message
+      setSuccessMessage('');
+    }
   };
 
   const handleFileChange = (e) => {
@@ -91,6 +117,12 @@ const UserProfile = () => {
               }
               label="Show Email to Others"
             />
+          </Grid>
+
+          {/* Error Message */}
+          <Grid item xs={12}>
+            {error && <Typography variant="body2" color="error">{error}</Typography>}
+            {successMessage && <Typography variant="body2" color="success">{successMessage}</Typography>}
           </Grid>
 
           {/* Update Profile Button */}

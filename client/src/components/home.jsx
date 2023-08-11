@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/Home.css'; // Import the custom CSS file for styling
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -19,6 +18,8 @@ import PrimarySearchAppBar from './PrimarySearchAppBar';
 import PostCreation from './PostCreation';
 import PostContentCard from './PostCard';
 import UserProfileSidebar from './Profilecard';
+import ButtomNavBar from './ButtomNavBar';
+
 
 function Home() {
   return (
@@ -107,6 +108,7 @@ function Home() {
             </Card>
 
             {/* Add other sections to the right sidebar as needed */}
+            <ButtomNavBar />
           </Grid>
         </Grid>
       </Container>
