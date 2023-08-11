@@ -24,22 +24,19 @@ function Home() {
   return (
     <div>
       <AppBar position="static">
-      <PrimarySearchAppBar />
+        <PrimarySearchAppBar />
       </AppBar>
 
       {/* Main Content */}
       <Container mt={4}>
         <Grid container spacing={4}>
-          {/* Left Sidebar */
-          
-          <UserProfileSidebar />
-          }
+          {/* Left Sidebar */}
           <Grid item md={3}>
             <Card>
               <CardContent>
-                <Avatar src="https://via.placeholder.com/150" alt="Profile Picture" sx={{ width: 150, height: 150, mb: 3 }} />
-                <Typography variant="h6">User Name</Typography>
-                <Typography variant="body1">User Bio</Typography>
+                <Avatar src="https://via.placeholder.com/150" alt="Profile Picture" sx={{ width: 150, height: 150, margin: '0 auto', mb: 3 }} />
+                <Typography variant="h6" align="center">User Name</Typography>
+                <Typography variant="body1" align="center">User Bio</Typography>
               </CardContent>
             </Card>
 
@@ -64,14 +61,11 @@ function Home() {
 
           {/* Main Feed */}
           <Grid item md={6}>
-            {/* Post Creation Form */
-            < PostCreation />
-            }
-            
+            {/* Post Creation Form */}
+            <PostCreation />
 
-            {/* Post Cards */
+            {/* Post Cards */}
             <PostContentCard />
-            }
           </Grid>
 
           {/* Right Sidebar */}
