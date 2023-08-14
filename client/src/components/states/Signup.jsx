@@ -16,7 +16,7 @@ import {
   Typography,
 } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
-import '../css/signup-style.css';
+
 
 const Signup = () => {
   const [name, setName] = useState('');
