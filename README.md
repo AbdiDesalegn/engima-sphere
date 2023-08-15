@@ -128,5 +128,11 @@ Usage:
 The example code provided earlier demonstrated how to use a package called amazing-package. However, since Engima-Sphere is a full-fledged social platform and not just a package, the usage is different.
 
 To use Engima-Sphere, you can interact with the frontend user interface to create posts, customize your profile, interact with other users' posts, send messages, and explore trending content. The usage of Engima-Sphere is primarily through its intuitive and user-friendly web interface.
+## Example Screenshots
+
+Here are some screenshots of our application in action:
+
+![Screenshot 1](screenshots/screenshot1.png)
+![Screenshot 2](screenshots/screenshot2.png)
 
 Enjoy your journey in Engima-Sphere, where you can connect with others, share your stories, and experience an exciting social universe! 🌌
