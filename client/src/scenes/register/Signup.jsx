@@ -7,20 +7,23 @@ import {
   Card,
   CardContent,
   Container,
-  FormControl,
   FormHelperText,
   Grid,
-  InputLabel,
   Link,
   TextField,
   Typography,
 } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
 
-
 const Signup = () => {
+  const [fullName, setFullName] = useState(''); // Fixed variable name
   const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [zipCode, setZipCode] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
@@ -35,7 +38,17 @@ const Signup = () => {
     }
 
     axios
-      .post('http://localhost:3000/register', { name, email, password })
+      .post('http://localhost:3000/register', {
+        fullName, // Changed from fullname to fullName
+        name,
+        age,
+        phoneNumber,
+        email,
+        address,
+        city,
+        zipCode,
+        password,
+      })
       .then((result) => {
         console.log(result);
         navigate('/login');
@@ -58,11 +71,41 @@ const Signup = () => {
               <Grid item xs={12}>
                 <TextField
                   fullWidth
+                  label="Full Name" // Fixed label spacing
+                  variant="outlined"
+                  required
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
                   label="Username"
                   variant="outlined"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  label="Age"
+                  variant="outlined"
+                  required
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  label="Phone Number"
+                  variant="outlined"
+                  required
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -74,6 +117,36 @@ const Signup = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  label="Address"
+                  variant="outlined"
+                  required
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  label="City"
+                  variant="outlined"
+                  required
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  label="Zip Code"
+                  variant="outlined"
+                  required
+                  value={zipCode}
+                  onChange={(e) => setZipCode(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
